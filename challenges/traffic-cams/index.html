@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Seattle Traffic</title>
+        
+        <!-- Leaflet stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
+
+        <!-- your stylesheet -->
+        <link rel="stylesheet" href="css/main.css"/>
+        
+        <!-- page icon -->
+        <link rel="icon" href="img/page-icon.png"/>
+    </head>
+    <body>
+        <div id="legend">
+            <h3>Seattle Traffic Cameras</h3>
+            <p>
+            <input type="search" id="cam-filter" class="form-control"
+                   placeholder="Filter Cameras by Street" autofocus/>
+            </p>
+            <p id="sdotp">SDOT Cameras</p>
+            <p id="sdotp-count"></p>
+            <p id="wsdotp">WSDOT Cameras</p>
+            <p id="wsdotp-count"></p>
+        </div>
+        <div id="map"></div>
+
+        <!-- jQuery library -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+        <!-- Leaflet library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
+
+        <!-- your script file -->
+        <script src="js/app.js"></script>
+    </body>
+</html>

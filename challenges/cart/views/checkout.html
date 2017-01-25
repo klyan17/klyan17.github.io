@@ -1,0 +1,152 @@
+<form name="checkoutForm" novalidate ng-submit="saveCheckout()">
+	<div class="container checkout-header">
+		<h2>Shipping Information:</h2>
+	</div>
+	<div class="form-group">
+		<label for="nameInp">Name: </label>
+		<input type="text" class="form-control" id="nameInp"
+			name="nameInp" ng-model="orderForm.name" required />
+		<p class="validation-error"
+           ng-if="checkoutForm.nameInp.$error.required">Full name is required</p>
+    </div>
+
+    <div class="form-group">
+    	<label for="addressOneInp">Address Line 1</label>
+    	<input type="text" class="form-control" id="addressOneInp"
+    		name="addressOneInp" ng-model="orderForm.addressOne" required />
+    	<p class="validation-error"
+           ng-if="checkoutForm.addressOneInp.$error.required">Address Line 1 is required</p>
+    </div>
+	
+	<div class="form-group">
+    	<label for="addressTwoInp">Address Line 2</label>
+    	<input type="text" class="form-control" id="addressTwoInp"
+    		name="addressTwoInp" ng-model="orderForm.addressOne" />
+    </div>
+
+	<div class="form-group">
+		<label for="cityInp">City: </label>
+		<input type="text" class="form-control" id="cityInp"
+			name="cityInp" ng-model="orderForm.city" required />
+		<p class="validation-error"
+           ng-if="checkoutForm.cityInp.$error.required">City is required</p>
+    </div>
+
+	<div class="form-group">
+		<label for="stateInp">State: </label>
+		<input type="text" class="form-control" id="stateInp"
+			name="stateInp" ng-model="orderForm.state" required />
+		<p class="validation-error"
+           ng-if="checkoutForm.stateInp.$error.required">State is required</p>
+    </div>
+
+	<div class="form-group">
+		<label for="zipInp">Zip: </label>
+		<input type="text" class="form-control" id="zipInp"
+			name="zipInp" ng-model="orderForm.zip" required />
+		<p class="validation-error"
+           ng-if="checkoutForm.zipInp.$error.required">Zip is required</p>
+    </div>
+
+    <h2>Billing Information:</h2>
+
+    <div class="checkbox">
+    	<label><input type="checkbox" name="repeatInp" id="repeatInp" ng-model="cart.repeat">Same as above</label>
+    </div>
+	<div class="form-group">
+		<label for="nameInp">Name: </label>
+		<input type="text" class="form-control" id="billNameInp"
+			name="billNameInp" ng-model="orderForm.billName" required />
+		<p class="validation-error"
+           ng-if="checkoutForm.billNameInp.$error.required">Full name is required</p>
+    </div>
+
+    <div class="form-group">
+    	<label for="billAddressOneInp">Address Line 1</label>
+    	<input type="text" class="form-control" id="billAddressOneInp"
+    		name="billAddressOneInp" ng-model="orderForm.billAddressOne" required />
+    	<p class="validation-error"
+           ng-if="checkoutForm.billAddressOneInp.$error.required">Address Line 1 is required</p>
+    </div>
+	
+	<div class="form-group">
+    	<label for="billAddressTwoInp">Address Line 2</label>
+    	<input type="text" class="form-control" id="billAddressTwoInp"
+    		name="billAddressOneInp" ng-model="orderForm.billAddressTwo" />
+    </div>
+
+	<div class="form-group">
+		<label for="cityInp">City: </label>
+		<input type="text" class="form-control" id="billCityInp"
+			name="billCityInp" ng-model="orderForm.billCity" required />
+		<p class="validation-error"
+           ng-if="checkoutForm.billCityInp.$error.required">City is required</p>
+    </div>
+
+	<div class="form-group">
+		<label for="stateInp">State: </label>
+		<input type="text" class="form-control" id="billStateInp"
+			name="billStateInp" ng-model="orderForm.billState" required />
+		<p class="validation-error"
+           ng-if="checkoutForm.stateInp.$error.required">State is required</p>
+    </div>
+
+	<div class="form-group">
+		<label for="zipInp">Zip: </label>
+		<input type="text" class="form-control" id="billZipInp"
+			name="billZipInp" ng-model="orderForm.billZip" required />
+		<p class="validation-error"
+           ng-if="checkoutForm.billZipInp.$error.required">Zip is required</p>
+    </div>
+
+	<h2>Payment Information:</h2>
+
+	<div class="form-group">
+		<label for="cardNameInp">Name of Cardholder: </label>
+		<input type="text" class="form-control" id="cardNameInp"
+			name="cardNameInp" ng-model="cart.cardName" required />
+		<p class="validation-error"
+           ng-if="checkoutForm.cardNameInp.$error.required">Card name is required</p>
+    </div>
+
+    <div class="form-group">
+    	<label for="cardNumberInp">Card Number:</label>
+    	<input type="text" class="form-control" id="cardNumberInp"
+    		name="cardNumberInp" ng-model="cart.cardNumber" luhn required/>
+    	<p class="validation-error"
+           ng-if="checkoutForm.cardNumberInp.$error.luhn">Card Number needs to follow Luhn identification</p>
+           <p class="validation-error"
+           ng-if="checkoutForm.cardNumberInp.$error.required">Card Number is required</p>
+    </div>
+	
+	<div class="form-group">
+    	<label for="expMonthInp">Expiration Month</label>
+    	<input type="text" class="form-control" id="expMonthInp"
+    		name="expMonthInp" ng-model="cart.expMonth" required min="1" max="12" step-"1"/>
+    	<p class="validation-error"
+           ng-if="checkoutForm.expMonthInp.$error.required">Expiration Month is required</p>
+    </div>
+
+	<div class="form-group">
+		<label for="expYearInp">Expiration Year: </label>
+		<input type="text" class="form-control" id="expYearInp"
+			name="expYearInp" ng-model="cart.expYear" inTenYears/>
+		<p class="validation-error"
+           ng-if="checkoutForm.expYearInp.$error.inTenYears">Expiration Year must be between 2015-2025</p>
+    </div>
+
+	<div class="form-group">
+		<label for="secCodeInp">Security Code: </label>
+		<input type="text" class="form-control" id="secCodeInp"
+			name="secCodeInp" ng-model="cart.secCode" required pattern="\d{3}"/>
+		<p class="validation-error"
+           ng-if="checkoutForm.secCodeInp.$error.required">Security Code is required</p>
+    </div>
+
+    <div class="form-group">
+        <a class="btn btn-default" ui-sref="main">Cancel</a>
+        <button type="submit" class="btn btn-default"
+                ng-disabled="checkoutForm.$invalid">Save</button>
+    </div>
+</form>
+

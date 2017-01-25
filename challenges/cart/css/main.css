@@ -1,0 +1,213 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,300);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+body {
+	font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	background-color: #E9EAEE;
+}
+
+body svg {
+	height: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Raleway, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h2 {
+	color: #BC6026;
+}
+
+nav {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #181C22;
+	font-size: 16px;
+	padding-left: 15px;
+	padding-top: 3px;
+	display: inline;
+}
+
+nav a {
+	color: #FFFFFF;
+	text-transform: lowercase;
+	font-variant: small-caps;
+	padding: .5em;
+	vertical-align: middle;
+}
+
+nav svg {
+	fill: currentColor;
+}
+
+#header {
+	padding-top: 3em;
+}
+
+#header p {
+	visibility: hidden;
+}
+
+#headline svg {
+	visibility: hidden;
+	fill: #D87E28;
+}
+
+#headline p {
+	font-style: italic;
+}
+
+#info {
+	background-color: #DBDCE3;
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+
+#info img {
+	border-radius: 5px;
+}
+
+#info svg {
+	fill: #D87E28;
+	margin: 1.5em;
+	height: 1.25em;
+}
+
+#menu {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#menu dt {
+	font-weight: 400;
+}
+
+#menu dd {
+	font-style: italic;
+	padding-left: 1em;
+}
+
+#story {
+	background-color: #DBDCE3;
+	padding-bottom: 1em;
+}
+
+#story img {
+	float: right;
+	max-height: 300px;
+	margin-left: 1em;
+	border-radius: 5px;
+}
+
+footer {
+	border-top-style: solid;
+	border-top-width: 3px;
+	border-top-color: #D87E28;
+	background-color: #AFB3C2;
+	font-size: 12px;
+	clear: both;
+	padding-top: 1em;
+}
+
+footer div {
+	background-color: #AFB3C2;
+}
+
+footer #icons {
+	text-align: left;
+}
+
+#comingsoon {
+	padding: 1em;
+	background-color: #DBDCE3;
+}
+
+.checkout-header, #confirmation{
+	padding-top: 2em;
+}
+
+.validation-error {
+    color: #DD0000;
+    font-size: 0.8em;
+}
+
+form .ng-dirty.ng-invalid {
+    border: 1px solid #DD0000;
+}
+
+form .ng-dirty.ng-valid {
+    border: 1px solid #00DD00;
+}
+
+@media (min-width: 768px) {
+	body {
+		font-size: 20px;
+	}
+
+	h2, h4 {
+		text-align: center;
+		padding-bottom: .5em;
+	}
+
+	nav {
+		background-color: rgba(24, 28, 34, .8);
+	}
+
+	nav a {
+		padding-left: 1em;
+		padding-right: 1em
+	}
+
+	nav a:focus, a:hover {
+		text-decoration: none;
+		color: #D87E28;
+	}			
+
+	#header p {
+		visibility: visible;
+	}
+
+	#headline {
+		font-size: 1.25em;
+		padding-top: 3em;
+		padding-bottom: 3em;
+		text-align: center;
+	}
+
+	#headline svg {
+		visibility: visible;
+		height: 1.5em;
+		vertical-align: middle;
+		margin-bottom: 1em;
+	}
+
+	#story img {
+		max-height: 400px;
+	}
+
+	footer {
+		padding-top: 0;
+	}
+
+	footer div {
+		padding-top: 1em;
+	}
+
+	footer #icons {
+		text-align: right;
+	}
+}
+
+@media (min-width: 992px) {
+
+	#header h1 {
+		font-size: 4em;
+	}
+}

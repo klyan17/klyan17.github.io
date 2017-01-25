@@ -1,0 +1,54 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+h3 {
+	color: white;
+}
+
+#map {
+    height: 100%;
+}
+
+#legend {
+	z-index: 1;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	height: 250px;
+	width: 300px;
+	background-color: black;
+	position: fixed;
+	padding-bottom: 20px;
+	text-align: center;
+	background-color: rgba(24, 28, 34, .8);
+}
+
+#sdotp, #sdotp-count {
+	color: #E9847A;
+}
+
+#wsdotp, #wsdotp-count {
+	color: #7ADFE9;
+}
+
+#sdotp, #wsdotp {
+	font-weight: bold;
+}
+
+#cam-filter {
+	width: 75%;
+	text-align: left;
+}
+
+.leaflet-popup-content-wrapper {
+	background-color: rgba(24, 28, 34, .8)
+}

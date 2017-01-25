@@ -1,0 +1,20 @@
+/* import the normalize stylesheet to eliminate differences between browser defaults */
+@import url(../lib/normalize.css);
+
+/* import the Google font 'Lato' */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic);
+
+/*
+    things we will practice in this example
+    - display and fixed positioning for nav layout
+    - styling svg
+    - floats and clears
+    - border radius
+    - absolute positioning
+*/
+
+body {
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 18px;
+}
+

@@ -1,0 +1,23 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+
+body {
+    font-size: 18px;
+}
+
+#states-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.expandable-section > :not(h2) {
+    display: none;
+}
+
+.expandable-section.expanded > :not(h2) {
+    display: block;
+}
+
+.expandable-section a {
+    color: #333;
+}
+

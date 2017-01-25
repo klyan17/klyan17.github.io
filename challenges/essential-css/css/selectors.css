@@ -1,0 +1,16 @@
+/* import the normalize stylesheet to eliminate differences between browser defaults */
+@import url(../lib/normalize.css);
+
+/* import the Google font 'Lato' */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic);
+
+/*
+    things we will practice in this example
+    - element selectors
+    - group selectors
+    - class selectors
+    - descendant selectors
+    - hover and focus pseudo-selectors (for styling hyperlinks)
+    - margins and padding
+    - borders
+*/

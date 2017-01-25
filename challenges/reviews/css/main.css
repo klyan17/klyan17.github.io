@@ -1,0 +1,132 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+
+body {
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: #000000;
+}
+
+#header {
+	background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, .2), 
+		rgba(0, 0, 0, .5)), 
+		linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+		url('../img/dow.png');
+
+	background-repeat: no-repeat;
+	min-height: 350px;
+	max-height: 350px;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 0;
+	visibility: hidden;
+}
+
+#gradient h1 {
+	color: #FFFFFF;
+	padding: 1em;
+	font-size: 2em;
+	float: left;
+}
+
+#gradient {
+	height: 150px;
+	background: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, .3), rgba(0, 0, 0, 1));
+	margin-bottom: 0;
+
+}
+
+.container h1 {
+	color: #CCCCCC;
+}
+
+#intro {
+	width: 100%;
+	background-color: #CCCCCC;
+	padding: 1em;
+	clear: both;
+}
+
+#summary, #avgrating {
+	padding: .5em;
+	padding-left: 0;
+	width: 75%;
+	margin: 0 auto;
+}
+
+#new-review-form {
+	width: 75%;
+    margin: 0 auto;
+}
+
+#new-review-form #rating {
+	color: #CCCCCC;
+}
+
+#reviews-box {
+	background-color: #CCCCCC;
+	width: 100%;
+}
+
+#reviews-box div {
+	padding: 1em;
+}
+
+#reviews-box h1 {
+	color: #000000;
+}
+
+#reviews-box .container {
+	padding: 1em;
+    margin: 0 auto;
+}
+
+#reviews-list {
+	width: %;
+	margin: 0 auto;
+}
+
+#reviews-list img {
+	float: right;
+	display: inline-block;
+	position: relative;
+	right: 5;
+	top: 15px;
+	width: 25px;
+	margin: .5em;
+	cursor: pointer;
+}
+
+.helpful {
+	font-size: .65em;
+}
+
+#error-message {
+    display: none;
+}
+
+.btn {
+	background-color: #CCCCCC;
+	color: #000000;
+}
+
+#creds {
+	font-size: .5em;
+}
+
+@media (min-width: 768px) {
+	#header {
+		min-width: 1000px;
+		max-width: 1000px;
+		background-position: center top;
+		visibility: visible;
+	}
+
+	#gradient {
+		background-color: #000000;
+		visibility: visible;
+		min-height: 350px;
+	}
+
+}

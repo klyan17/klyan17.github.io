@@ -1,0 +1,99 @@
+  <div id="header">
+    <div class="container">
+      <h1>Dawg Coffee<br />
+      Orders</h1>
+
+      <p>Supplying Beans to Sleepy Huskies Since 2015</p>
+    </div>
+  </div>
+
+  <h2>Selection</h2>
+
+  <h4>limited to 10lb/bean</h4>
+
+  <p class="form-group"><label for="catSel">Filter:</label> <select id="catSel" ng-model=
+  "currentCategory" ng-options="c for c in categories" class="form-control">
+    </select></p>
+
+  <div class="container">
+    <table class="table">
+      <tbody>
+        <tr ng-repeat=
+        "coffee in coffees | orderBy: 'name' | filter : {categories: currentCategory}">
+          <td>{{coffee.name}}</td>
+
+          <td>{{coffee.description}}</td>
+
+          <td>{{coffee.price | currency}}/lb</td>
+
+          <td><span>Qty:</span> <input type="text" class="form-control" size="3"
+          ng-model="newCoffee.qty" /></td>
+
+          <td>
+            <form ng-submit="updateCart(coffee)">
+              <span>Grind:</span> <select id="grindSel" ng-model="newCoffee.grind" class=
+              "form-control">
+                <option selected="selected">
+                  Whole Bean
+                </option>
+
+                <option>
+                  Espresso
+                </option>
+
+                <option>
+                  French Press
+                </option>
+
+                <option>
+                  Filter
+                </option>
+              </select><br />
+              <button type="submit" class="btn btn-info">Add to Cart</button>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Cart</h2>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Item Name</th>
+
+          <th>Grind</th>
+
+          <th>Quantity</th>
+
+          <th>Price</th>
+
+          <th>Extended Price</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="newCoffee in cart">
+          <td>{{newCoffee.name}}</td>
+
+          <td>{{newCoffee.grind}}</td>
+
+          <td>{{newCoffee.qty}}</td>
+
+          <td>{{newCoffee.price | currency}}</td>
+
+          <td>{{newCoffee.ext | currency}}</td>
+
+          <td><button type="button" class="btn btn-danger" ng-click=
+          "removeOrder(newCoffee)">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Total: {{total | currency}}</h3>
+
+    <p class="pull-right">
+    	<a class="btn btn-primary" ui-sref="checkout()">To Checkout</a>
+    </p>
+  </div>
