@@ -1,0 +1,94 @@
+body {
+  font: 10px sans-serif;
+  background-color: #000;
+  margin: 0px;
+}
+
+.chord path {
+  fill-opacity: .67;
+  stroke: #000;
+  stroke-width: .5px;
+}
+
+#header {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 3em;
+    padding: 1em;
+}
+
+#rectangle {
+    position: absolute;
+    background-color: #333;
+    height: 580px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index:-1;
+}
+
+#distLabel {
+  bottom: 10px;
+}
+
+#genreLabel {
+  bottom: -60px;
+}
+
+#distLabel, #genreLabel {
+  font-size: 40px;
+  position: absolute;
+  margin: 0px;
+  left: 10%;
+}
+
+#chart {
+	width: 1000px;
+	height: 800px;
+	margin: auto;
+  margin-bottom: 50px;
+}
+
+#ui {
+	padding: 50px;
+}
+
+#colorButton {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+#toggles {
+    right: 25px;
+    top: 80px;
+    width: 250px;
+}
+
+.arcs {
+  cursor: pointer;
+}
+
+#details {
+    font-size: 11pt;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+table, th, td {
+    border: 1px solid #999;
+    border-collapse: collapse;
+    padding: 3px;
+    background-color: #888;
+}
+td {
+    text-align: right;
+}
+
+h2 {
+  font-size: 14pt;
+  text-decoration: underline;
+}
+
+#details, #colorButton, #header, #distLabel, #genreLabel {
+  color: white;
+}

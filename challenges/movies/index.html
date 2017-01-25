@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Theodore Chin - Movie Genre and Distribution</title>
+  <link rel='shortcut icon' href='/Portfolio/src/img/favicon.ico' type='image/x-icon'/ >
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/Portfolio/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/Portfolio/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+  <link rel="stylesheet" href="jqueryslider/css/iThing.css" type="text/css" />
+
+  <!-- Required scripts -->
+  <script src="jquery-ui/external/jquery/jquery.js"></script>
+  <script src="jquery-ui/jquery-ui.min.js"></script>
+  <script src="d3/d3.min.js"></script>
+  <script src="jqueryslider/jQDateRangeSlider-min.js"></script>
+  <script src="PapaParse/papaparse.min.js"></script>
+  <script src="linqjs/dist/linq.js"></script>
+  <!-- Visualization scripts -->
+  <script src="chordchart.js"></script>
+  <script src="linqtest.js"></script>
+  <script src="ui.js"></script>
+</head>
+
+<body>
+  <!--Navbar-->
+  <nav role="navigation" id="layout-navbar">
+  </nav>
+
+  <!--Content-->
+  <br>
+  <br>
+  <div id="rectangle">
+    <p id="distLabel">Distributors</p>
+    <p id="genreLabel">Genre</p>
+  </div>
+  <div id="header">2013-2014 Film Distributors and Genres Diagram</div>
+  <div class="container">
+    <div class="row">
+      <div class="col m10">
+        <div id="chart"></div>
+      </div> 
+      <div class="col m2">
+        <div id="toggles">
+          <div id="radioColor">
+            <span id="colorButton">Chord Origin Color:</span>
+            <br>
+              <input type="radio" id="radioMovie" name="radioColor" checked="checked"><label for="radioMovie">Movies</label>
+              <input type="radio" id="radioGenre" name="radioColor"><label for="radioGenre">Genre</label>
+          </div>
+          <br>
+          <div id="radioValue">
+            <span id="colorButton">Arc Value:</span>
+            <br>
+              <input type="radio" id="radioFilmCount" name="radioValue" checked="checked"><label for="radioFilmCount">Films Distributed</label>
+              <input type="radio" id="radioGross" name="radioValue"><label for="radioGross">Total Grossing</label>
+          </div>
+          <div id="details">
+          </div>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <div id="layout-footer">
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/Portfolio/js/init.js"></script>
+  <script src="/Portfolio/js/materialize.js"></script>
+
+  </body>
+</html>
